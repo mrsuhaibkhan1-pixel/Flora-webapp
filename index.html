@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flora - Earn</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Flora</h1>
+      <button id="logoutBtn" style="display:none">Logout</button>
+    </header>
+
+    <main>
+      <section id="authSection">
+        <h2>Login / Signup</h2>
+        <input id="email" placeholder="Email">
+        <input id="password" placeholder="Password" type="password">
+        <button id="signupBtn">Sign up</button>
+        <button id="loginBtn">Log in</button>
+        <button id="googleBtn">Continue with Google</button>
+      </section>
+
+      <section id="dashboard" style="display:none">
+        <h2>Welcome, <span id="displayName"></span></h2>
+        <p>Balance: <span id="balance">0</span> FLORA</p>
+        <div id="timerArea">
+          <p>Mining timer: <span id="timerText">--:--</span></p>
+          <button id="claimBtn">Claim Reward</button>
+        </div>
+        <p>Referral code: <span id="refCode"></span></p>
+        <input id="useRef" placeholder="Enter referral code">
+        <button id="applyRef">Apply Referral</button>
+        <h3>History</h3>
+        <ul id="history"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/mining.js"></script>
+</body>
+</html>
